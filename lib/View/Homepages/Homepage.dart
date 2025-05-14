@@ -221,7 +221,7 @@ class Homepage extends StatelessWidget {
               children: [
 
                 Image.asset(
-                  'assets/images/Made-with-passion-and-love.png',
+                  'assets/Images/Made-with-passion-and-love.png',
                   width: MediaQuery.of(context).size.width * 0.8,
                   fit: BoxFit.cover,
                 ),
