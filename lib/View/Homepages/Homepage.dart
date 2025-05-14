@@ -185,7 +185,7 @@ class Homepage extends StatelessWidget {
                                   borderRadius: BorderRadius.circular(12),
                                   image: DecorationImage(
                                     image: AssetImage(service['image'] ??
-                                        'assets/images/placeholder.png'),
+                                        'assets/Images/placeholder.png'),
                                     fit: BoxFit.cover,
                                   ),
                                 ),
