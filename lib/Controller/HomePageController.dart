@@ -19,15 +19,15 @@ class HomePageController extends GetxController {
   ];
   final List<Map<String, String>> services = [
     {
-      'image': 'assets/images/productionfacilities.jpg',
+      'image': 'assets/Images/productionfacilities.jpg',
       'title': 'Production Facilities',
     },
     {
-      'image': 'assets/images/chocolate3.jpg',
+      'image': 'assets/Images/chocolate3.jpg',
       'title': 'Private and White Labels',
     },
     {
-      'image': 'assets/images/Corporate-Gifting.jpg',
+      'image': 'assets/Images/Corporate-Gifting.jpg',
       'title': 'Corporate Gifting',
     },
   ];

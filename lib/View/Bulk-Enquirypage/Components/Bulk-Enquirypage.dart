@@ -44,7 +44,7 @@ class BulkEnquiry extends StatelessWidget {
           height: 300,
           decoration: BoxDecoration(
             image: DecorationImage(
-              image: AssetImage('assets/images/homepage.jpg'),
+              image: AssetImage('assets/Images/homepage.jpg'),
               fit: BoxFit.cover,
             ),
           ),
