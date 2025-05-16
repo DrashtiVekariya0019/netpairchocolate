@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -7,6 +8,7 @@ import 'package:netpairchocolate/Support/Widget/CommonElevatedButton.dart';
 import 'package:netpairchocolate/Support/Widget/CustomStyle.dart';
 import 'package:netpairchocolate/Utils/AppColors.dart';
 import 'package:netpairchocolate/View/Navigationpage/AppBar.dart';
+
 
 class BulkEnquiry extends StatelessWidget {
   final BulkEnquiryController controller = Get.put(BulkEnquiryController());
@@ -22,10 +24,13 @@ class BulkEnquiry extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                SizedBox(height: 20,),
+                SizedBox(height: 20),
                 _buildHeader(),
                 SizedBox(height: 20),
-                _buildForm(maxWidth),
+                FadeIn( // << FORM FADE IN
+                  duration: Duration(milliseconds: 800),
+                  child: _buildForm(maxWidth),
+                ),
                 SizedBox(height: 50),
                 websitefooter(),
               ],
@@ -41,25 +46,54 @@ class BulkEnquiry extends StatelessWidget {
       children: [
         Container(
           width: double.infinity,
-          height: 300,
+          height: 500,
           decoration: BoxDecoration(
             image: DecorationImage(
-              image: AssetImage('assets/Images/homepage.jpg'),
+              image: AssetImage('assets/Images/chocolatenew6.jpg'),
               fit: BoxFit.cover,
             ),
           ),
         ),
         Positioned.fill(
-          child: Center(
-            child: Text("Enquiry",
-              style: TextStyle(fontSize: 36, fontWeight: FontWeight.bold, color: AppColors.white,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              SlideInDown(
+                duration: Duration(milliseconds: 800),
+                child: Text(
+                  "Enquiry",
+                  style: GoogleFonts.montserrat(
+                    fontSize: 32,
+                    fontWeight: FontWeight.bold,
+                    color: AppColors.brown,
+                  ),
+                ),
               ),
-            ),
+              SizedBox(height: 12),
+              FadeInUp(
+                duration: Duration(milliseconds: 900),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                  child: Center(
+                    child: Text(
+                      "Looking to place a bulk order for our premium chocolates?\n Fill out the form below and we’ll get back to you with the\n best offers and personalized solutions.",
+                      textAlign: TextAlign.center,
+                      style: GoogleFonts.montserrat(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w500,
+                        color: AppColors.brown,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ],
           ),
         ),
       ],
     );
   }
+
 
   Widget _buildForm(double maxWidth) {
     return Padding(
@@ -88,9 +122,7 @@ class BulkEnquiry extends StatelessWidget {
               SizedBox(height: 20),
               CommonElevatedButton(
                 text: "Submit",
-                onPressed: () {
-
-                },
+                onPressed: () {},
               ),
             ],
           ),
@@ -108,7 +140,7 @@ class BulkEnquiry extends StatelessWidget {
           fontWeight: FontWeight.w600,
           color: Color(0xFF5A5A5A),
         ),
-       maxLines: maxLines,
+        maxLines: maxLines,
         decoration: _inputDecoration(hintText),
       ),
     );

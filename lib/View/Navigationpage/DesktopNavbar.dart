@@ -12,7 +12,7 @@ class DesktopNavbar extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center, // ✅ Items Centered
       children: [
         NavItem(
-          title: 'HOME',
+          title: '    HOME    ',
           onTap: () => Get.toNamed(AppRoutes.home),
         ),
         const SizedBox(width: 20),

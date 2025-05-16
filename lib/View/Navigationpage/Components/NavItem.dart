@@ -23,7 +23,7 @@ class _NavItemState extends State<NavItem> {
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: Colors.transparent,
+      color: AppColors.white,
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 10),
         child: InkWell(
@@ -35,8 +35,8 @@ class _NavItemState extends State<NavItem> {
               widget.title,
               style: GoogleFonts.montserrat(
                 fontSize: 15,
-                fontWeight: FontWeight.w700,
-                color: Colors.black,
+                fontWeight: FontWeight.bold,
+                color: AppColors.brown,
               ),
             ),
           ),

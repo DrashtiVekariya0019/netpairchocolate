@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:netpairchocolate/Controller/HomePageController.dart';
 import 'package:get/get.dart';
-import 'package:netpairchocolate/Support/CommonTextStyle.dart';
 import 'package:netpairchocolate/Support/Footer.dart';
 import 'package:netpairchocolate/Utils/AppColors.dart';
 
@@ -15,37 +14,22 @@ class Homepage extends StatelessWidget {
   Widget build(BuildContext context) {
     return LayoutBuilder(builder: (context, constraints) {
       final isDesktop = constraints.maxWidth > 1200;
-      final isTablet =
-          constraints.maxWidth > 600 && constraints.maxWidth <= 1200;
-      final titleFontSize = isDesktop ? 26.0 : (isTablet ? 20.0 : 14.0);
-
-      double getImageHeight() {
-        if (isDesktop) return 330;
-        if (isTablet) return 200;
-        return 220;
-      }
-
-      double getImageWidth() {
-        if (isDesktop) {
-          return constraints.maxWidth * 0.6;
-        }
-        return constraints.maxWidth;
-      }
+      final isTablet = constraints.maxWidth > 600 && constraints.maxWidth <= 1200;
 
       return SingleChildScrollView(
         physics: ScrollPhysics(),
         child: Column(
           children: [
+            // Carousel Section
             Stack(
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(top: 20.0), // Adjust the value as needed
+                  padding: const EdgeInsets.only(top: 20.0),
                   child: CarouselSlider(
                     carouselController: homePageController.carouselController,
                     options: CarouselOptions(
                       height: MediaQuery.of(context).size.height - 150,
                       viewportFraction: 1.0,
-                      enlargeCenterPage: false,
                       autoPlay: true,
                       onPageChanged: (index, reason) {
                         homePageController.currentIndex.value = index;
@@ -92,7 +76,6 @@ class Homepage extends StatelessWidget {
                     }).toList(),
                   ),
                 ),
-
                 Positioned(
                   left: 20,
                   top: 0,
@@ -123,14 +106,15 @@ class Homepage extends StatelessWidget {
                 ),
               ],
             ),
+
+            // Carousel indicators
             Obx(() => Padding(
               padding: const EdgeInsets.symmetric(vertical: 20),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: homePageController.slides.asMap().entries.map((entry) {
                   return GestureDetector(
-                    onTap: () => homePageController.carouselController
-                        .jumpToPage(entry.key),
+                    onTap: () => homePageController.carouselController.jumpToPage(entry.key),
                     child: Container(
                       width: 10,
                       height: 10,
@@ -146,80 +130,9 @@ class Homepage extends StatelessWidget {
                 }).toList(),
               ),
             )),
-            Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: GetBuilder<HomePageController>(
-                builder: (controller) {
-                  if (controller.services.isEmpty) {
-                    return Center(
-                      child: Text(
-                        "No Services Available",
-                        style: TextStyle(
-                            fontSize: 18, fontWeight: FontWeight.bold),
-                      ),
-                    );
-                  }
-                  return LayoutBuilder(
-                    builder: (context, constraints) {
-                      int crossAxisCount = isDesktop ? 3 : (isTablet ? 2 : 1);
-                      double gridHeight = constraints.maxWidth / crossAxisCount * 1.2;
-                      return GridView.builder(
-                        shrinkWrap: true,
-                        physics: NeverScrollableScrollPhysics(),
-                        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                          crossAxisCount: crossAxisCount,
-                          crossAxisSpacing: 20,
-                          mainAxisSpacing: 20,
-                          childAspectRatio: 0.75,
-                        ),
-                        itemCount: controller.services.length,
-                        itemBuilder: (context, index) {
-                          final service = controller.services[index];
-                          return Column(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Container(
-                                height: gridHeight * 0.6,
-                                width: double.infinity,
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(12),
-                                  image: DecorationImage(
-                                    image: AssetImage(service['image'] ??
-                                        'assets/Images/placeholder.png'),
-                                    fit: BoxFit.cover,
-                                  ),
-                                ),
-                              ),
-                              SizedBox(height: 10),
-                              Text(
-                                service['title'] ?? "No Title",
-                                textAlign: TextAlign.center,
-                                style: GoogleFonts.montserrat(
-                                  fontSize: 20,
-                                  fontWeight: FontWeight.w700,
-                                  color: AppColors.brown,
-                                ),
-                              ),
-
-
-                            ],
-                          );
-
-                          
-                        },
-                      );
-
-                    },
-                  );
-                },
-              ),
-            ),
-
             Column(
-              mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-
                 Image.asset(
                   'assets/Images/Made-with-passion-and-love.png',
                   width: MediaQuery.of(context).size.width * 0.8,
@@ -231,7 +144,7 @@ class Homepage extends StatelessWidget {
                   textAlign: TextAlign.center,
                   style: GoogleFonts.montserrat(
                     fontSize: 15,
-                    fontWeight: FontWeight.w400,
+                    fontWeight: FontWeight.w600,
                     color: AppColors.brown,
                   ),
                 ),
@@ -245,8 +158,7 @@ class Homepage extends StatelessWidget {
                       onPressed: () {},
                       style: OutlinedButton.styleFrom(
                         side: const BorderSide(color: Colors.brown),
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 24, vertical: 12),
+                        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
                       ),
                       child: Text(
                         'PURE CHOCOLATES →',
@@ -261,8 +173,7 @@ class Homepage extends StatelessWidget {
                       onPressed: () {},
                       style: OutlinedButton.styleFrom(
                         side: const BorderSide(color: Colors.brown),
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 24, vertical: 12),
+                        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
                       ),
                       child: Text(
                         'TROPICAL CHOCOLATES →',
@@ -278,6 +189,58 @@ class Homepage extends StatelessWidget {
               ],
             ),
             SizedBox(height: 20,),
+
+            // Services Grid Section
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0), // vertical padding कम की
+              child: GetBuilder<HomePageController>(
+                builder: (controller) {
+                  return GridView.builder(
+                    shrinkWrap: true,
+                    physics: const NeverScrollableScrollPhysics(),
+                    gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 3,
+                      crossAxisSpacing: 16,
+                      mainAxisSpacing: 12,
+                      childAspectRatio: 0.75,
+                    ),
+                    itemCount: controller.services.length,
+                    itemBuilder: (context, index) {
+                      final service = controller.services[index];
+                      return Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Expanded(
+                            child: Container(
+                              width: double.infinity,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(12),
+                                image: DecorationImage(
+                                  image: AssetImage(service['image']!),
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                            ),
+                          ),
+                          const SizedBox(height: 8),
+                          Text(
+                            service['title']!,
+                            textAlign: TextAlign.center,
+                            style: GoogleFonts.montserrat(
+                              fontSize: 18,
+                              fontWeight: FontWeight.w700,
+                              color: AppColors.brown,
+                            ),
+                          ),
+                        ],
+                      );
+                    },
+                  );
+                },
+              ),
+            ),
+            SizedBox(height: 20,),
+
             websitefooter(),
           ],
         ),

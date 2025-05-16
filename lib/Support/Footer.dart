@@ -60,7 +60,7 @@ class websitefooter extends StatelessWidget {
             "Copyright ©netpairchocolates.com. All Rights Reserved",
             style: GoogleFonts.montserrat(
               fontSize: 10,
-              fontWeight: FontWeight.normal,
+              fontWeight: FontWeight.w500,
               color: Colors.brown.shade700,
             ),
           ),
@@ -86,7 +86,7 @@ class websitefooter extends StatelessWidget {
           Text(detail,
             style: GoogleFonts.montserrat(
               fontSize: 14,
-              fontWeight: FontWeight.normal,
+              fontWeight: FontWeight.w500,
               color: Colors.brown.shade700,
             ),),
       ],
@@ -101,7 +101,7 @@ class websitefooter extends StatelessWidget {
         Text(text,
           style: GoogleFonts.montserrat(
             fontSize: 14,
-            fontWeight: FontWeight.normal,
+            fontWeight: FontWeight.w500,
             color: Colors.brown.shade700,
           ),),
       ],
@@ -124,7 +124,7 @@ class websitefooter extends StatelessWidget {
           textAlign: TextAlign.center,
     style: GoogleFonts.montserrat(
     fontSize: 14,
-    fontWeight: FontWeight.normal,
+    fontWeight: FontWeight.w500,
     color: Colors.brown.shade700,
     ),),
         SizedBox(height: 10),
@@ -140,7 +140,7 @@ class websitefooter extends StatelessWidget {
             "Join →",
             style: GoogleFonts.montserrat(
               fontSize: 14,
-              fontWeight: FontWeight.normal,
+              fontWeight: FontWeight.w500,
               color: Colors.brown,
             ),
           ),
