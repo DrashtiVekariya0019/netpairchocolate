@@ -40,38 +40,35 @@ class ContactUsPage extends StatelessWidget {
 
       return SingleChildScrollView(
         child: Column(
-          spacing: 10,
+           spacing: 10,
           children: [
             Container(
               width: MediaQuery.of(context).size.width,
               height: getImageHeight(),
-              child: Padding(
-                padding: const EdgeInsets.only(top: 16.0),
-                child: FlutterMap(
-                  options: MapOptions(
-                      initialCenter: LatLng(20.5937, 78.9629),
-                      initialZoom: 5.0, // Increased zoom to better see India
-                      interactionOptions: InteractionOptions(
-                        flags: InteractiveFlag.none,
-                        debugMultiFingerGestureWinner: false,
-                        enableMultiFingerGestureRace: false,
-                      )
-                  ),
-                  children: [
-                    TileLayer(
-                      urlTemplate:
-                      "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
-                      subdomains: ['a', 'b', 'c'],
-                    ),
-                    MarkerLayer(
-                      markers: [
-                        // Only keeping the India marker
-                        _buildMarker(LatLng(20.5937, 78.9629)), // India
-                      ],
-                    ),
-                  ],
-                ),
-              ),
+              child: FlutterMap(
+               options: MapOptions(
+                   initialCenter: LatLng(20.5937, 78.9629),
+                   initialZoom: 5.0, // Increased zoom to better see India
+                   interactionOptions: InteractionOptions(
+                     flags: InteractiveFlag.none,
+                     debugMultiFingerGestureWinner: false,
+                     enableMultiFingerGestureRace: false,
+                   )
+               ),
+               children: [
+                 TileLayer(
+                   urlTemplate:
+                   "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                   subdomains: ['a', 'b', 'c'],
+                 ),
+                 MarkerLayer(
+                   markers: [
+                     // Only keeping the India marker
+                     _buildMarker(LatLng(20.5937, 78.9629)), // India
+                   ],
+                 ),
+               ],
+                              ),
             ),
             Container(
               width: MediaQuery.of(context).size.width,

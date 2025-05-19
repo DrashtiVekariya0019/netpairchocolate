@@ -24,20 +24,19 @@ class _NavItemState extends State<NavItem> {
   Widget build(BuildContext context) {
     return Material(
       color: AppColors.white,
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 10),
-        child: InkWell(
-          onTap: widget.onTap,
-          hoverColor: Colors.grey.withOpacity(0.1),
-          child: Padding(
-            padding: const EdgeInsets.symmetric(vertical: 8.0),
-            child: Text(
-              widget.title,
-              style: GoogleFonts.montserrat(
-                fontSize: 15,
-                fontWeight: FontWeight.bold,
-                color: AppColors.brown,
-              ),
+      borderRadius: BorderRadius.circular(8), // ✅ White box ko rounded banaya
+      child: InkWell(
+        onTap: widget.onTap,
+        hoverColor: Colors.grey.withOpacity(0.1),
+        borderRadius: BorderRadius.circular(8), // ✅ Hover effect bhi round ho
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8.0),
+          child: Text(
+            widget.title,
+            style: GoogleFonts.montserrat(
+              fontSize: 15,
+              fontWeight: FontWeight.bold,
+              color: AppColors.brown,
             ),
           ),
         ),
@@ -45,6 +44,7 @@ class _NavItemState extends State<NavItem> {
     );
   }
 }
+
 
 class NavDropdownItem extends StatefulWidget {
   final String title;

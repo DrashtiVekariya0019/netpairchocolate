@@ -23,58 +23,55 @@ class Homepage extends StatelessWidget {
             // Carousel Section
             Stack(
               children: [
-                Padding(
-                  padding: const EdgeInsets.only(top: 20.0),
-                  child: CarouselSlider(
-                    carouselController: homePageController.carouselController,
-                    options: CarouselOptions(
-                      height: MediaQuery.of(context).size.height - 150,
-                      viewportFraction: 1.0,
-                      autoPlay: true,
-                      onPageChanged: (index, reason) {
-                        homePageController.currentIndex.value = index;
-                      },
-                    ),
-                    items: homePageController.slides.map((slide) {
-                      return Builder(
-                        builder: (BuildContext context) {
-                          return Stack(
-                            children: [
-                              Container(
-                                width: MediaQuery.of(context).size.width,
-                                decoration: BoxDecoration(
-                                  image: DecorationImage(
-                                    image: AssetImage(slide['image']!),
-                                    fit: BoxFit.cover,
+                CarouselSlider(
+                  carouselController: homePageController.carouselController,
+                  options: CarouselOptions(
+                    height: MediaQuery.of(context).size.height - 150,
+                    viewportFraction: 1.0,
+                    autoPlay: true,
+                    onPageChanged: (index, reason) {
+                      homePageController.currentIndex.value = index;
+                    },
+                  ),
+                  items: homePageController.slides.map((slide) {
+                    return Builder(
+                      builder: (BuildContext context) {
+                        return Stack(
+                          children: [
+                            Container(
+                              width: MediaQuery.of(context).size.width,
+                              decoration: BoxDecoration(
+                                image: DecorationImage(
+                                  image: AssetImage(slide['image']!),
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                            ),
+                            Positioned.fill(
+                              child: Center(
+                                child: Text(
+                                  slide['text']!,
+                                  textAlign: TextAlign.center,
+                                  style: GoogleFonts.montserrat(
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.w700,
+                                    color: AppColors.white,
+                                    shadows: [
+                                      Shadow(
+                                        blurRadius: 5.0,
+                                        color: Colors.black54,
+                                        offset: Offset(2, 2),
+                                      ),
+                                    ],
                                   ),
                                 ),
                               ),
-                              Positioned.fill(
-                                child: Center(
-                                  child: Text(
-                                    slide['text']!,
-                                    textAlign: TextAlign.center,
-                                    style: GoogleFonts.montserrat(
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.w700,
-                                      color: AppColors.white,
-                                      shadows: [
-                                        Shadow(
-                                          blurRadius: 5.0,
-                                          color: Colors.black54,
-                                          offset: Offset(2, 2),
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                ),
-                              )
-                            ],
-                          );
-                        },
-                      );
-                    }).toList(),
-                  ),
+                            )
+                          ],
+                        );
+                      },
+                    );
+                  }).toList(),
                 ),
                 Positioned(
                   left: 20,

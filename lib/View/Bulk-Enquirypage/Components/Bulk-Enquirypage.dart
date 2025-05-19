@@ -24,7 +24,7 @@ class BulkEnquiry extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                SizedBox(height: 20),
+                // SizedBox(height: 20),
                 _buildHeader(),
                 SizedBox(height: 20),
                 FadeIn( // << FORM FADE IN

@@ -43,7 +43,7 @@ class Appbar extends StatelessWidget {
                     children: [
                       Image.asset(
                         "assets/Images/NPChocolate01.png",
-                        height: 60,
+                        height: 80,
                         // fit: BoxFit.contain,
                       ),
                       Expanded(
