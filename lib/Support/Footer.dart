@@ -56,17 +56,13 @@ class websitefooter extends StatelessWidget {
                 SizedBox(width: 30),
                 Expanded(
                   child: _buildInfoColumn("Our Corporate Office", [
-                    "C-205, GANESH GLORY, 11, Jagatpur Rd, ",
-                    "Jagatpur Village, Gota, Ahmedabad, ",
-                    "Gujarat 382481",
+                    "1202,Link,100 FT RCC ROAD,Serenity\nSpace Rd,near JLR Showroom,\nGota,Ahemdabad,382481",
                   ]),
                 ),
                 SizedBox(width: 30),
                 Expanded(
                   child: _buildInfoColumn("Our Manufacturing Units", [
-                    "C-205, GANESH GLORY, 11, Jagatpur Rd, ",
-                    "Jagatpur Village, Gota, Ahmedabad, ",
-                    "Gujarat 382481",
+                    "1202,Link,100 FT RCC ROAD,Serenity\nSpace Rd,near JLR Showroom,\nGota,Ahemdabad,382481",
                   ]),
                 ),
               ],
