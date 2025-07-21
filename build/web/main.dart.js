@@ -87325,13 +87325,13 @@ A.wZ.prototype={
 M(a){var s=null,r=t.p
 return A.dB(s,A.et(A.b([new A.kS(new A.avh(this),s),A.ne(A.b([A.ne(A.b([A.a7a(B.F2,B.hH,s,18),A.da(s,s,8),A.cn("info@netpairchocolates.com",s,s,s,A.dc().$3$color$fontSize$fontWeight(B.cg,14,B.J),s,s)],r),B.a1,B.a2,B.a8)],r),B.a1,B.dF,B.a8),A.da(s,30,s),this.a6j(),A.da(s,20,s),new A.Kk(B.my,s),A.cn("Copyright \xa9netpairchocolates.com. All Rights Reserved",s,s,s,A.dc().$3$color$fontSize$fontWeight(B.cg,10,B.J),s,s)],r),B.a1,B.a2,B.a8,0),B.u,B.fF,s,s,s,s,s,s,new A.as(20,40,20,40),s,s,s)},
 N0(a,b){var s,r=null,q=A.b([A.cn(a,r,r,r,A.dc().$3$color$fontSize$fontWeight(B.mB,18,B.aB),r,r),A.da(r,10,r)],t.p)
-for(s=0;s<3;++s)q.push(A.cn(b[s],r,r,r,A.dc().$3$color$fontSize$fontWeight(B.cg,14,B.J),r,r))
+for(s=0;s<1;++s)q.push(A.cn(b[s],r,r,r,A.dc().$3$color$fontSize$fontWeight(B.cg,14,B.J),r,r))
 return A.et(q,B.bF,B.a2,B.a8,0)},
 a6j(){var s=null,r=A.cn("Join Our Team",s,s,s,A.dc().$3$color$fontSize$fontWeight(B.cg,18,B.aB),s,s),q=A.da(s,5,s),p=A.cn("We are constantly on the lookout for brilliant people.",s,s,s,A.dc().$3$color$fontSize$fontWeight(B.cg,14,B.J),B.cs,s),o=A.da(s,10,s),n=A.awW(s,s,s,s,s,s,s,s,s,s,s,s,new A.as(24,10,24,10),s,new A.cV(A.h2(20),B.r),new A.aU(B.hH,1,B.v,-1),s,s,s,s)
 return A.et(A.b([r,q,p,o,A.awV(A.cn("Join \u2192",s,s,s,A.dc().$3$color$fontSize$fontWeight(B.hH,14,B.J),s,s),new A.avg(),n)],t.p),B.a1,B.a2,B.a8,0)}}
 A.avh.prototype={
-$2(a,b){var s=null,r="C-205, GANESH GLORY, 11, Jagatpur Rd, ",q="Jagatpur Village, Gota, Ahmedabad, ",p=t.p,o=this.a,n=t.s
-return A.ne(A.b([A.jx(A.et(A.b([A.akj(A.a7g("assets/Images/NPChocolate01.png",B.Ap,200,s),new A.i(0,-20)),A.cn("JUST FEEL!",s,s,s,A.dc().$3$color$fontSize$fontWeight(B.cg,16,B.b8),s,s),A.da(s,8,s),A.cn("IT'S MORE THAN JUST CHOCOLATE",s,s,s,A.dc().$3$color$fontSize$fontWeight(B.cg,14,B.b8),s,s)],p),B.a1,B.a2,B.a8,0),1),A.da(s,s,30),A.jx(o.N0("Our Corporate Office",A.b([r,q,"Gujarat 382481"],n)),1),A.da(s,s,30),A.jx(o.N0("Our Manufacturing Units",A.b([r,q,"Gujarat 382481"],n)),1)],p),B.bF,B.dF,B.a8)},
+$2(a,b){var s=null,r="1202,Link,100 FT RCC ROAD,Serenity\nSpace Rd,near JLR Showroom,\nGota,Ahemdabad,382481",q=t.p,p=this.a,o=t.s
+return A.ne(A.b([A.jx(A.et(A.b([A.akj(A.a7g("assets/Images/NPChocolate01.png",B.Ap,200,s),new A.i(0,-20)),A.cn("JUST FEEL!",s,s,s,A.dc().$3$color$fontSize$fontWeight(B.cg,16,B.b8),s,s),A.da(s,8,s),A.cn("IT'S MORE THAN JUST CHOCOLATE",s,s,s,A.dc().$3$color$fontSize$fontWeight(B.cg,14,B.b8),s,s)],q),B.a1,B.a2,B.a8,0),1),A.da(s,s,30),A.jx(p.N0("Our Corporate Office",A.b([r],o)),1),A.da(s,s,30),A.jx(p.N0("Our Manufacturing Units",A.b([r],o)),1)],q),B.bF,B.dF,B.a8)},
 $S:570}
 A.avg.prototype={
 $0(){},
