@@ -87323,7 +87323,7 @@ s.CI()}}
 A.p4.prototype={}
 A.wZ.prototype={
 M(a){var s=null,r=t.p
-return A.dB(s,A.et(A.b([new A.kS(new A.avh(this),s),A.ne(A.b([A.ne(A.b([A.a7a(B.F2,B.hH,s,18),A.da(s,s,8),A.cn("info@netpairchocolates.com",s,s,s,A.dc().$3$color$fontSize$fontWeight(B.cg,14,B.J),s,s)],r),B.a1,B.a2,B.a8)],r),B.a1,B.dF,B.a8),A.da(s,30,s),this.a6j(),A.da(s,20,s),new A.Kk(B.my,s),A.cn("Copyright \xa9netpairchocolates.com. All Rights Reserved",s,s,s,A.dc().$3$color$fontSize$fontWeight(B.cg,10,B.J),s,s)],r),B.a1,B.a2,B.a8,0),B.u,B.fF,s,s,s,s,s,s,new A.as(20,40,20,40),s,s,s)},
+return A.dB(s,A.et(A.b([new A.kS(new A.avh(this),s),A.ne(A.b([A.ne(A.b([A.a7a(B.F2,B.hH,s,18),A.da(s,s,8),A.cn("info@netpairchocolates.com",s,s,s,A.dc().$3$color$fontSize$fontWeight(B.cg,14,B.J),s,s)],r),B.a1,B.a2,B.a8)],r),B.a1,B.dF,B.a8),A.da(s,30,s),this.a6j(),A.da(s,20,s),new A.Kk(B.my,s),A.cn("Copyright \xa9 2025 Netpair Chocolates Pvt. Ltd. All rights reserved.",s,s,s,A.dc().$3$color$fontSize$fontWeight(B.cg,10,B.J),s,s)],r),B.a1,B.a2,B.a8,0),B.u,B.fF,s,s,s,s,s,s,new A.as(20,40,20,40),s,s,s)},
 N0(a,b){var s,r=null,q=A.b([A.cn(a,r,r,r,A.dc().$3$color$fontSize$fontWeight(B.mB,18,B.aB),r,r),A.da(r,10,r)],t.p)
 for(s=0;s<1;++s)q.push(A.cn(b[s],r,r,r,A.dc().$3$color$fontSize$fontWeight(B.cg,14,B.J),r,r))
 return A.et(q,B.bF,B.a2,B.a8,0)},
