@@ -81,7 +81,7 @@ class websitefooter extends StatelessWidget {
           SizedBox(height: 20),
           Divider(color: Colors.brown.shade200),
           Text(
-            "Copyright ©netpairchocolates.com. All Rights Reserved",
+            "Copyright © 2025 Netpair Chocolates Pvt. Ltd. All rights reserved.",
             style: GoogleFonts.montserrat(
               fontSize: 10,
               fontWeight: FontWeight.w500,
