@@ -56,13 +56,13 @@ class websitefooter extends StatelessWidget {
                 SizedBox(width: 30),
                 Expanded(
                   child: _buildInfoColumn("Our Corporate Office", [
-                    "1202,Link,100 FT RCC ROAD,Serenity\nSpace Rd,near JLR Showroom,\nGota,Ahemdabad,382481",
+                    "621, Fortune Business Hub, Science City Road, Road, Thaltej, Ahemdabad, Guj-380660",
                   ]),
                 ),
                 SizedBox(width: 30),
                 Expanded(
                   child: _buildInfoColumn("Our Manufacturing Units", [
-                    "1202,Link,100 FT RCC ROAD,Serenity\nSpace Rd,near JLR Showroom,\nGota,Ahemdabad,382481",
+                    "621, Fortune Business Hub, Science City Road, Road, Thaltej, Ahemdabad, Guj-380660",
                   ]),
                 ),
               ],
