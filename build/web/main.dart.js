@@ -89424,8 +89424,8 @@ return A.eE(q,B.bJ,B.a3,B.a9,0)},
 a6Z(){var s=null,r=A.cv("Join Our Team",s,s,s,A.dg().$3$color$fontSize$fontWeight(B.cs,18,B.aB),s,s),q=A.df(s,5,s),p=A.cv("We are constantly on the lookout for brilliant people.",s,s,s,A.dg().$3$color$fontSize$fontWeight(B.cs,14,B.M),B.cx,s),o=A.df(s,10,s),n=A.azI(s,s,s,s,s,s,s,s,s,s,s,s,new A.ay(24,10,24,10),s,new A.cY(A.he(20),B.q),new A.aU(B.hL,1,B.w,-1),s,s,s,s)
 return A.eE(A.c([r,q,p,o,A.azH(A.cv("Join \u2192",s,s,s,A.dg().$3$color$fontSize$fontWeight(B.hL,14,B.M),s,s),new A.ay6(),n)],t.p),B.a2,B.a3,B.a9,0)}}
 A.ay7.prototype={
-$2(a,b){var s=null,r="621, Fortune Business Hub, Science City Road, Road, Thaltej, Ahemdabad, Guj-380660",q=t.p,p=this.a,o=t.s
-return A.nv(A.c([A.jI(A.eE(A.c([A.amr(A.a9_("assets/Images/NPChocolate01.png",B.B2,200,s),new A.h(0,-20)),A.cv("JUST FEEL!",s,s,s,A.dg().$3$color$fontSize$fontWeight(B.cs,16,B.bb),s,s),A.df(s,8,s),A.cv("IT'S MORE THAN JUST CHOCOLATE",s,s,s,A.dg().$3$color$fontSize$fontWeight(B.cs,14,B.bb),s,s)],q),B.a2,B.a3,B.a9,0),1),A.df(s,s,30),A.jI(p.N7("Our Corporate Office",A.c([r],o)),1),A.df(s,s,30),A.jI(p.N7("Our Manufacturing Units",A.c([r],o)),1)],q),B.bJ,B.dI,B.a9)},
+$2(a,b){var s=null,r=t.p,q=this.a,p=t.s
+return A.nv(A.c([A.jI(A.eE(A.c([A.amr(A.a9_("assets/Images/NPChocolate01.png",B.B2,200,s),new A.h(0,-20)),A.cv("JUST FEEL!",s,s,s,A.dg().$3$color$fontSize$fontWeight(B.cs,16,B.bb),s,s),A.df(s,8,s),A.cv("IT'S MORE THAN JUST CHOCOLATE",s,s,s,A.dg().$3$color$fontSize$fontWeight(B.cs,14,B.bb),s,s)],r),B.a2,B.a3,B.a9,0),1),A.df(s,s,30),A.jI(q.N7("Our Corporate Office",A.c(["621, Fortune Business Hub, Science City Road, Road, Thaltej, Ahemdabad, Guj-380660"],p)),1),A.df(s,s,30),A.jI(q.N7("Our Manufacturing Units",A.c(["621, Fortune Business Hub, Science City Road, Thaltej, Ahemdabad, Guj-380660"],p)),1)],r),B.bJ,B.dI,B.a9)},
 $S:583}
 A.ay6.prototype={
 $0(){},
