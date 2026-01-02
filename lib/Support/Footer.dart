@@ -56,13 +56,13 @@ class websitefooter extends StatelessWidget {
                 SizedBox(width: 30),
                 Expanded(
                   child: _buildInfoColumn("Our Corporate Office", [
-                    "621, Fortune Business Hub, Science City Road, Road, Thaltej, Ahemdabad, Guj-380660",
+                    "621, Fortune Business Hub, Science City Road, Thaltej, Ahemdabad, Guj-380660",
                   ]),
                 ),
                 SizedBox(width: 30),
                 Expanded(
                   child: _buildInfoColumn("Our Manufacturing Units", [
-                    "621, Fortune Business Hub, Science City Road, Road, Thaltej, Ahemdabad, Guj-380660",
+                    "621, Fortune Business Hub, Science City Road, Thaltej, Ahemdabad, Guj-380660",
                   ]),
                 ),
               ],

@@ -40,35 +40,35 @@ class ContactUsPage extends StatelessWidget {
 
       return SingleChildScrollView(
         child: Column(
-           spacing: 10,
+          spacing: 10,
           children: [
             Container(
               width: MediaQuery.of(context).size.width,
               height: getImageHeight(),
               child: FlutterMap(
-               options: MapOptions(
-                   initialCenter: LatLng(20.5937, 78.9629),
-                   initialZoom: 5.0, // Increased zoom to better see India
-                   interactionOptions: InteractionOptions(
-                     flags: InteractiveFlag.none,
-                     debugMultiFingerGestureWinner: false,
-                     enableMultiFingerGestureRace: false,
-                   )
-               ),
-               children: [
-                 TileLayer(
-                   urlTemplate:
-                   "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
-                   subdomains: ['a', 'b', 'c'],
-                 ),
-                 MarkerLayer(
-                   markers: [
-                     // Only keeping the India marker
-                     _buildMarker(LatLng(20.5937, 78.9629)), // India
-                   ],
-                 ),
-               ],
-                              ),
+                options: MapOptions(
+                    initialCenter: LatLng(20.5937, 78.9629),
+                    initialZoom: 5.0, // Increased zoom to better see India
+                    interactionOptions: InteractionOptions(
+                      flags: InteractiveFlag.none,
+                      debugMultiFingerGestureWinner: false,
+                      enableMultiFingerGestureRace: false,
+                    )
+                ),
+                children: [
+                  TileLayer(
+                    urlTemplate:
+                    "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                    subdomains: ['a', 'b', 'c'],
+                  ),
+                  MarkerLayer(
+                    markers: [
+                      // Only keeping the India marker
+                      _buildMarker(LatLng(23.081623, 72.5714)), // India
+                    ],
+                  ),
+                ],
+              ),
             ),
             Container(
               width: MediaQuery.of(context).size.width,
@@ -76,7 +76,7 @@ class ContactUsPage extends StatelessWidget {
               child: FlutterMap(
                 options: MapOptions(
                     initialCenter:
-                    LatLng(23.116093055656204, 72.53822522881343),
+                    LatLng(23.081623, 72.49571), // Updated center to new coordinates
                     initialZoom: 15.5,
                     interactionOptions: InteractionOptions(
                       flags: InteractiveFlag.none,
@@ -92,7 +92,7 @@ class ContactUsPage extends StatelessWidget {
                   ),
                   MarkerLayer(
                     markers: [
-                      _buildMarker(LatLng(23.1158818359417, 72.53797005267273)),
+                      _buildMarker(LatLng(23.081623, 72.49571)), // Updated marker coordinates
                     ],
                   ),
                 ],
