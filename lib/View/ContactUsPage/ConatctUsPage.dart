@@ -16,6 +16,7 @@ class ContactUsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final mapController = MapController();
     return Appbar(body: LayoutBuilder(builder: (context, constraints) {
       // Define breakpoints
       final isDesktop = constraints.maxWidth > 1200;
@@ -73,27 +74,63 @@ class ContactUsPage extends StatelessWidget {
             Container(
               width: MediaQuery.of(context).size.width,
               height: getImageHeight(),
-              child: FlutterMap(
-                options: MapOptions(
-                    initialCenter:
-                    LatLng(23.081623, 72.49571), // Updated center to new coordinates
-                    initialZoom: 15.5,
-                    interactionOptions: InteractionOptions(
-                      flags: InteractiveFlag.none,
-                      debugMultiFingerGestureWinner: false,
-                      enableMultiFingerGestureRace: false,
-                    )
-                ),
+              child: Stack(
                 children: [
-                  TileLayer(
-                    urlTemplate:
-                    "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
-                    subdomains: ['a'],
-                  ),
-                  MarkerLayer(
-                    markers: [
-                      _buildMarker(LatLng(23.081623, 72.49571)), // Updated marker coordinates
+                  FlutterMap(
+                    mapController: mapController,
+                    options: MapOptions(
+                        initialCenter: LatLng(23.081623, 72.49571),
+                        initialZoom: 13.0, // Simplified zoom level
+                        interactionOptions: InteractionOptions(
+                          flags: InteractiveFlag.drag | InteractiveFlag.pinchZoom, // Only drag and pinch zoom, no scroll zoom
+                        )
+                    ),
+                    children: [
+                      TileLayer(
+                        urlTemplate:
+                        "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                        subdomains: ['a', 'b', 'c'],
+                      ),
+                      MarkerLayer(
+                        markers: [
+                          _buildMarkerWithLabel(LatLng(23.081623, 72.49571)),
+                        ],
+                      ),
                     ],
+                  ),
+                  // Zoom Controls
+                  Positioned(
+                    right: 16,
+                    top: 16,
+                    child: Column(
+                      children: [
+                        FloatingActionButton(
+                          mini: true,
+                          backgroundColor: Colors.white,
+                          onPressed: () {
+                            final currentZoom = mapController.camera.zoom;
+                            mapController.move(
+                              mapController.camera.center,
+                              currentZoom + 1,
+                            );
+                          },
+                          child: Icon(Icons.add, color: Colors.black87),
+                        ),
+                        SizedBox(height: 8),
+                        FloatingActionButton(
+                          mini: true,
+                          backgroundColor: Colors.white,
+                          onPressed: () {
+                            final currentZoom = mapController.camera.zoom;
+                            mapController.move(
+                              mapController.camera.center,
+                              currentZoom - 1,
+                            );
+                          },
+                          child: Icon(Icons.remove, color: Colors.black87),
+                        ),
+                      ],
+                    ),
                   ),
                 ],
               ),
@@ -112,6 +149,42 @@ class ContactUsPage extends StatelessWidget {
       height: 40,
       point: position,
       child: Icon(Icons.location_on, color: Colors.pink, size: 30),
+    );
+  }
+
+  Marker _buildMarkerWithLabel(LatLng position) {
+    return Marker(
+      width: 150,
+      height: 60,
+      point: position,
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Container(
+            padding: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(6),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black26,
+                  blurRadius: 4,
+                  offset: Offset(0, 2),
+                ),
+              ],
+            ),
+            child: Text(
+              'Netpair Infotech',
+              style: GoogleFonts.montserrat(
+                fontSize: 12,
+                fontWeight: FontWeight.w600,
+                color: Colors.black87,
+              ),
+            ),
+          ),
+          Icon(Icons.location_on, color: Colors.pink, size: 30),
+        ],
+      ),
     );
   }
 }
